@@ -32,7 +32,7 @@
                 <th>Reference</th>
                 <th>Title</th>
                 <th>Prix</th>
-                <th colspan="2">Action</th>
+                <th colspan="2" sec:authorize="hasRole('manage')" >Action</th>
             </tr>
             </thead>
             <tbody>
@@ -80,7 +80,7 @@
     <div sec:authorize="hasRole('user')">
         This content is only shown to users.
     </div>
-    <div sec:authorize="hasRole('managetable')">
+    <div sec:authorize="hasRole('adminmanager')">
         This content is only shown to managers.
     </div>
 

@@ -50,7 +50,16 @@ public class ProduitController {
         model.addAttribute("produit", new Produit());
         return "ajouterproduit";
     }
+    @GetMapping("profile")
+    public String getprofile() {
 
+        return "profile";
+    }
+    @GetMapping("customer")
+    public String getCustemr() {
+
+        return "customer";
+    }
 
     @GetMapping("/indexpage")
     public String listProduits(Model model,
